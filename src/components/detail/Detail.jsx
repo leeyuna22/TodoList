@@ -57,7 +57,7 @@ const StButton = styled.button`
   border-radius: 10px;
   height: 40px;
   width: 120px;
-  background-color: #c4e4f8;
+  background-color: #c7eaff;
   border-radius: 12px;
   cursor: pointer;
 `;
