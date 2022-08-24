@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoList from "./pages/TodoList";
+import { Routes, Route } from "react-router-dom";
+import DetailTodo from "./pages/DetailTodo";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<TodoList/>}/>
+      <Route path="/detail/:id" element={<DetailTodo/>}/>
+      <Route path="*" element={<>404 NOT FOUND</>}/>
+    </Routes>
+  )
 }
 
 export default App;
